@@ -10,6 +10,8 @@ public class NextPermutation {
     }
 
     static void nextPermut(int[] nums){
+
+        //
         int i = nums.length-2;
         while(i>=0 && nums[i+1]<=nums[i]){//finding the index of first element such tht nums[i] < nums[i+1], and we will use i for simplicity, not i-1, looping from right
             i--;
