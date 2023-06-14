@@ -24,6 +24,10 @@ public class Noodles {
 
     }
 
+    public String getCookPrep() {
+        return "Boil in water for 7 mins and add veggies and sauce";
+    }
+
     public static void main(String[] args) {
 
         Spaetzle kaesespaetzle = new Spaetzle();

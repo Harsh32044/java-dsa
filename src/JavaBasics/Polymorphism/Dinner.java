@@ -1,8 +1,10 @@
 package JavaBasics.Polymorphism;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Dinner {
 
-    private void makeDinner(Noodles noodle, String sauce) {
+    private void makeDinner(@NotNull Noodles noodle, String sauce) {
         noodle.cook();
 
         System.out.println("Mixing " + noodle.texture + " noodle made from " + noodle.ingredients + " with " + sauce + ".");
