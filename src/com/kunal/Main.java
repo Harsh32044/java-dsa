@@ -15,6 +15,14 @@ public class Main {
         // Static methods and variables
         //Can't use anything non-static inside a static method
         System.out.println(Human.population);
+
+
+        MusicPlayer mp3Player = new MusicPlayer();
+        /*mp3Player.addSong("Aa bhi Ja Sanam", "Atif Aslam", 3.12f);
+        mp3Player.addSong("Beete Lamhe", "KK", 3.32f);
+        mp3Player.addSong("Jaane Kyu", "Vishal Dadlani", 2.59f);*/
+
+        System.out.println(mp3Player.getPlayList());
     }
 
 }
