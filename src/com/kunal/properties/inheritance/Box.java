@@ -23,4 +23,10 @@ public class Box {
         this.wid = wid;
         this.height = height;
     }
+
+    public Box(Box box) {
+        this.height = box.height;
+        this.wid = box.wid;
+        this.len = box.len;
+    }
 }

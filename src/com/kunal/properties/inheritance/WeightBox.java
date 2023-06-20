@@ -17,4 +17,12 @@ public class WeightBox extends Box{
         super(side);
         this.weight = weight;
     }
+
+    public WeightBox(WeightBox wbox) {
+        super(wbox);
+        //wbox is of type WeightBox, which has all the public things of Box class, so calling super(wbox) will call Box constructor
+        //which will take len wid and height attributes of wbox
+
+        this.weight = wbox.weight;
+    }
 }
