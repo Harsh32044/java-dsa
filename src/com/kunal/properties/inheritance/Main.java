@@ -17,6 +17,6 @@ public class Main {
 
         TextureBox txtBx = new TextureBox();
         System.out.println(txtBx.height + " " + txtBx.weight + " " +
-                txtBx.texture + " " + txtBx.weight);
+                txtBx.texture + " " + txtBx.weight +" "+ txtBx.len);
     }
 }
