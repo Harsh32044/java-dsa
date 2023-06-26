@@ -2,9 +2,11 @@ package com.kunal.properties.intefaces.interfaceExtendDemo;
 
 public class Main {
     public static void main(String[] args) {
-        ExtndInterface extnd = new ExtndInterface();
+        ExtndInterface extend = new ExtndInterface();
 
-        extnd.fun();
-        extnd.greet();
+        extend.fun();
+        extend.greet();
+
+        A.greetings();//static methods are called via the interface name only
     }
 }
