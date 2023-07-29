@@ -1,17 +1,26 @@
 package com.kunal.collections;
 
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
 
-        List<Integer> e = new LinkedList<>();
-        List<Integer> e2 = new ArrayList<>();
-        List<Integer> vect = new Vector<>();
+       var list = new GenericList<String>();
+       list.add("A");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("sfd");
+       list.add("tyfuy");
 
-        e.add(2);
-        e2.add(33);
-
-        vect.add(2);
+       System.out.println(list.size());
+       var iterator = list.iterator();
+       for (String ignored : list) {
+           System.out.println(iterator.next());
+       }
     }
 }
