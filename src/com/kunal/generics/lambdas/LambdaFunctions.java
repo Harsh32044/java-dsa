@@ -14,18 +14,32 @@ public class LambdaFunctions {
         Consumer<Integer> func = item -> System.out.println(item + 1);
         arr.forEach(func);
 
-        /*Cat myCat = new Cat();
-        myCat.print();
+      /*  Cat myCat = new Cat();
+        myCat.print("calling via object of Cat class");
         printThing(myCat);*/
-        printThing(suffix -> {
-            System.out.println("Meoww "+ suffix);
-            return "Meow";
-        });
+        Printable objLambda = name -> {
+            System.out.println("Meow using Lambda as Object " +
+                    name); // Treating lambdas as object
+            return "Meow!";
+        };
+
+        // OR
+        printThing(
+                name -> {
+                    System.out.println("Meow using Lambda! " +
+                            name);
+                    return "Meow via Lambdas!";
+                }
+                );
+
+
+        printThing(objLambda);
+
 
     }
 
-    static void printThing(Printable thing) {
-       String st = thing.print("!");
-        System.out.println("Using the return value of thing() " + st);
+    static void printThing(Printable thing) {//An object of Cat class can be given as argument in printThing() method, since Cat implements Printable
+        thing.print("inside printThing");
+
     }
 }
