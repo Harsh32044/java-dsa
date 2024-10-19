@@ -1,6 +1,5 @@
 package com.kunal.collections;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Iterator;
 
@@ -9,7 +8,6 @@ public class GenericList<T> implements Iterable<T>{
     private T[] items = (T[]) new Object[10];
     private int count = 0;
 
-    @NotNull
     @Override
     public Iterator<T> iterator() {
         return new ListIterator(this);

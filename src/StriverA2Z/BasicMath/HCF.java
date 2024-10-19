@@ -2,7 +2,10 @@ package StriverA2Z.BasicMath;
 
 public class HCF {
     public static void main(String[] args) {
+        System.out.println("=========EUCLID'S METHOD=========");
         System.out.println(getHCFBetter(200,478));
+        System.out.println("=========SUBTRACTIVE=============");
+        System.out.println(getHCFSubtractive(200,478));
     }
     //Naive approach
     static int getHCF(int a,int b){
@@ -23,7 +26,30 @@ public class HCF {
         //Base Case HCF(a,0) = a;
         if(b == 0)
             return a;
-        return getHCFBetter(b,a%b);
+//        return getHCFBetter(b,a%b);
+
+        while (b != 0) {
+            int tmp = a;
+            a = b;
+            b = tmp % b;
+        }
+
+        return a;
+    }
+
+    // Subtractive method
+    static int getHCFSubtractive(int a, int b) {
+
+        while (a != b) {
+            if (a > b) {
+                a = a-b;
+            }
+            else {
+                b = b-a;
+            }
+        }
+
+        return a;
     }
 
 //    static Long[] lcmAndGcd(Long A, Long B){

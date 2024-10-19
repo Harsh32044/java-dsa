@@ -9,7 +9,7 @@ public class QuickSortRough {
         quickSort(arr, 0,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
-    static void quickSort(int arr[], int low, int high)
+    static void quickSort(int[] arr, int low, int high)
     {
         if(low >= high){
             return;
@@ -18,7 +18,7 @@ public class QuickSortRough {
         int e = high;
         int pivot = partition(arr, s, e);
 
-        while(low <= high) {
+        while(s < e) {
 
             while(arr[s] < pivot){
                 s++;
@@ -28,12 +28,10 @@ public class QuickSortRough {
                 e--;
             }
 
-            if(s<=e){
+            if(s<e){
                 int temp = arr[s];
                 arr[s] = arr[e];
                 arr[e] = temp;
-                e--;
-                s++;
             }
         }
 
